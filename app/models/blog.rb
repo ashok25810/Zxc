@@ -5,4 +5,6 @@ class Blog < ApplicationRecord
 
   #validating model data 
   validates_presence_of :title, :body
+
+  belongs_to :topic
 end
