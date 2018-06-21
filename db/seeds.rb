@@ -1,3 +1,11 @@
+3.times do |topic|
+	Topic.create!(
+		title: "Topic #{topic}"
+		)
+end
+
+puts "3 topics created"
+
 10.times do |blog|
 
 	Blog.create!(
@@ -6,7 +14,8 @@
 		body: "fghjk jhegjlkd kdgjlkjk kjdgkljl
 		kdlglfkjl lkgjlkfjl ldjgkldfjhkl ldjgkldfjhkl  
 		fdgjfhnfd fdhjhlf jfgjkhfjh jfhjhkj
-		kfbjkgjfjh hjjfdjf fhjfhklglk kghkjflkh"
+		kfbjkgjfjh hjjfdjf fhjfhklglk kghkjflkh",
+		topic_id: Topic.last.id
 
 		)
 
@@ -23,10 +32,10 @@ end
 
 puts "5 Skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
 	Portfolio.create!(
 		title: "my portfolio #{portfolio_item}",
-		subtitle: "My great Service",
+		subtitle: "Ruby on Rails",
 		body: "sbdjjgfgn sjdgkjsjjh
 		jbgkjndfjkngjfn bfgjkfjnfgj
 		jfkghjdfhg hfjghjfgl kfgjghfj
@@ -35,5 +44,20 @@ puts "5 Skills created"
 		thumb_image: "http://via.placeholder.com/250x150"
 		)
 end
+
+1.times do |portfolio_item|
+	Portfolio.create!(
+		title: "my portfolio #{portfolio_item}",
+		subtitle: "Angular",
+		body: "sbdjjgfgn sjdgkjsjjh
+		jbgkjndfjkngjfn bfgjkfjnfgj
+		jfkghjdfhg hfjghjfgl kfgjghfj
+		hgfhjg fgjhfdjkghlkdfk fklgkldfj" ,
+		main_image: "http://via.placeholder.com/350x250",
+		thumb_image: "http://via.placeholder.com/250x150"
+		)
+end
+
+
 
 puts "9 portfolios created"
