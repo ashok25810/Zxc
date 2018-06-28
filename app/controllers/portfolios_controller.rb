@@ -1,3 +1,4 @@
+
 class PortfoliosController < ApplicationController
 layout "portfolio"
 
